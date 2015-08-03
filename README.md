@@ -39,7 +39,6 @@ Estructura del web services:
 
 	RESPONSE
 
-
 	<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://soap.sforce.com/schemas/class/services_ws" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	   <soapenv:Body>
 	      <getDataCodeResponse>
