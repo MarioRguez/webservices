@@ -1,0 +1,32 @@
+<apex:page showHeader="true" sidebar="true" controller="portal_ctr">
+	<apex:sectionHeader title="Consulta de Códigos" subtitle="Códigos" />
+
+    <apex:form >        
+		<apex:pageBlock title="Consulta de Códigos">
+			<apex:pageBlockButtons location="top">
+				<apex:commandButton action="{!sendRequest}" value="Consultar" reRender="tablaReporte"/>
+				<apex:commandButton action="{!cleanRequest}" value="Limpiar"/>
+			</apex:pageBlockButtons>
+			<apex:pageBlockSection title="Consulta del Reporte" columns="2" id="consultReport">
+				<apex:inputText label="País" value="{!country}" required="true" />
+				<apex:inputText label="Estado" value="{!city}" />
+				<apex:inputText label="Municipio" value="{!municipality}" />
+				<apex:inputText label="Código" value="{!codex}" />
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+	</apex:form>
+
+	<apex:pageBlock title="Resultado de búsqueda" id="tablaReporte">
+		<apex:pageBlockSection title="Resultado del Reporte" columns="1">
+			<apex:pageBlockTable value="{!lsCodex}" var="item">
+				<apex:column headerValue="País" value="{!item.municipality__r.city__r.country__r.Name}" />
+				<apex:column headerValue="Estado" value="{!item.municipality__r.city__r.Name}" />
+				<apex:column headerValue="Municipio" value="{!item.municipality__r.Name}" />
+				<apex:column headerValue="Acentamiento" value="{!item.township__c}" />
+				<apex:column headerValue="Tipo" value="{!item.type__c}" />
+				<apex:column headerValue="Código" value="{!item.Name}" />
+			</apex:pageBlockTable>
+		</apex:pageBlockSection>
+	</apex:pageBlock>
+
+</apex:page>
