@@ -7,9 +7,11 @@ Herramientas:
 	SoapUI : http://www.soapui.org/
 	force.com : https://www.login.salesforce.com/
 
-1- Descargar SoapUI e Instalarlo
-2- Dentro de la carpeta Recursos, se encuentra un archivo XML de la estructura de los objetos
-3- En base al XML generar las clases para el punto de comunicación
+1- Descargar SoapUI e Instalarlo.
+
+2- Dentro de la carpeta Recursos, se encuentra un archivo XML de la estructura de los objetos.
+
+3- En base al XML generar las clases para el punto de comunicación.
 
 4- Esperar instrucciones.
 
