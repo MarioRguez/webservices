@@ -42,28 +42,26 @@ Estructura del web services:
 	<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://soap.sforce.com/schemas/class/services_ws" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	   <soapenv:Body>
 	      <getDataCodeResponse>
-	         <result xsi:type="codex__c">
-	            <Id> ? </Id>
-	            <Name> ? </Name>
-	            <municipality__c> ? </municipality__c>
-	            <municipality__r xsi:type="municipality__c">
-	               <Id> ? </Id>
-	               <Name> ? </Name>
-	               <city__c> ? </city__c>
-	               <city__r xsi:type="city__c">
-	                  <Id> ? </Id>
-	                  <Name> ? </Name>
-	                  <country__c> ? </country__c>
-	                  <country__r xsi:type="country__c">
-	                     <Id> ? </Id>
-	                     <Name> ? </Name>
-	                  </country__r>
-	               </city__r>
-	            </municipality__r>
-	            <township__c> ? </township__c>
-	            <type__c> ? </type__c>
-			 </result>
+	      	 <result>
+	            <FOLIO> ? </FOLIO>
+	            <municipality_r>
+	               <city_r>
+	                  <country_r>
+	                     <FOLIO> ? </FOLIO>
+	                     <NAME> ? </NAME>
+	                  </country_r>
+	                  <FOLIO> ? </FOLIO>
+	                  <NAME> ? </NAME>
+	               </city_r>
+	               <FOLIO> ? </FOLIO>
+	               <NAME> ? </NAME>
+	            </municipality_r>
+	            <NAME> ? </NAME>
+	            <TOWNSHIP> ? </TOWNSHIP>
+	            <TYPE> ? </TYPE>
+	         </result>
 	      </getDataCodeResponse>
 	   </soapenv:Body>
 	</soapenv:Envelope>
+
 
